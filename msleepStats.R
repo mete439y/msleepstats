@@ -13,3 +13,8 @@ Q3
 
 Q4 <- lm(bodywt ~ vore + sleep_rem, msleep)
 summary(Q4)
+
+QQ <- msleep%>%
+  filter(vore != "omni" & vore != "insecti")%>%
+  mutate(vorebin = ifelse(vore == 'carni', 0, 1))
+QQ
