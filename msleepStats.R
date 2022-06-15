@@ -18,3 +18,6 @@ QQ <- msleep%>%
   filter(vore != "omni" & vore != "insecti")%>%
   mutate(vorebin = ifelse(vore == 'carni', 0, 1))
 QQ
+
+Q5 <- glm(formula = vore ~ sleep_total, family =  binomial(), data = QQ)
+summary(Q5)
