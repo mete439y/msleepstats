@@ -19,5 +19,4 @@ QQ <- msleep%>%
   mutate(vorebin = ifelse(vore == 'carni', 0, 1))
 
 
-Q5 <- glm(formula = vore ~ sleep_total, family =  binomial(), data = QQ)
 
